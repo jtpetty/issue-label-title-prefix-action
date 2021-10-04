@@ -1,0 +1,17 @@
+name: 'Issue Label Title Prefix'
+description: 'Add/updates title prefix of issues based on issue labels.'
+inputs:
+  token:
+    description: 'The GitHub authentication token.'
+    required: false
+    default: ${{ github.token }}
+  prefixes:
+    description: 'Mapping of label to prefix.'
+    required: true
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
+
+branding:
+  icon: 'bell'
+  color: 'gray-dark'

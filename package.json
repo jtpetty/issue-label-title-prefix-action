@@ -1,0 +1,28 @@
+{
+  "name": "issue-label-title-prefix-action",
+  "version": "1.0.0",
+  "description": "This Action allows you to prefix and issue title based on a label that is added",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "build": "ncc build index.js - dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jtpetty/issue-label-title-prefix-action.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jtpetty/issue-label-title-prefix-action/issues"
+  },
+  "homepage": "https://github.com/jtpetty/issue-label-title-prefix-action#readme",
+  "dependencies": {
+    "@actions/core": "^1.6.0",
+    "@actions/github": "^5.0.0"
+  },
+  "devDependencies": {
+      "jest": "^25.2.4"
+  }
+}
