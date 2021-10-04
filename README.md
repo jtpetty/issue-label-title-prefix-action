@@ -24,8 +24,8 @@ jobs:
   notify:
     runs-on: ubuntu-latest
     steps:
-        - uses: jtpetty/issue-label-title-prefix-action@1.0
+        - uses: jtpetty/issue-label-title-prefix-action@v1.0
           with:
-             recipients: |
+             prefixes: |
                   bug=🔴
                   feature=🔹
