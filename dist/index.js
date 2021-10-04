@@ -8464,7 +8464,7 @@ async function run() {
 
       const origTitle = github.context.payload.issue.title;
       const knownPrefixes = extractKnownPrefixes(mappings);
-      const newTitle  = correctTitle(issue.title, prefix, knownPrefixes);
+      const newTitle  = correctTitle(origTitle, prefix, knownPrefixes);
 
       if (origTitle !== newTitle) {
         console.log("new title is %o", newTitle);
