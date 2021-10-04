@@ -4,7 +4,7 @@ const { correctTitle, parsePrefixMapping, extractKnownPrefixes } = require('./ut
 
 async function run() {
   try {
-    const issueNumber = github.context.payload.issue.number;
+    const issue_number = github.context.payload.issue.number;
     const owner = github.context.repo.owner;
     const repo = github.context.repo.repo;
     const label = github.context.payload.label.name;
@@ -28,7 +28,7 @@ async function run() {
 	      await octokit.rest.issues.update({
              owner,
              repo,
-             issueNumber,
+             issue_number,
              title: newTitle
         });
       }
