@@ -8462,17 +8462,12 @@ async function run() {
     if (label in mappings) {
       const prefix = mappings[label];
 
-      const issue = await octokit.issues.get({
-        owner,
-        repo,
-        issueNumber
-      });
-
-      const origTitle = issue.title;
+      const origTitle = github.context.payload.issue.title;
       const knownPrefixes = extractKnownPrefixes(mappings);
       const newTitle  = correctTitle(issue.title, prefix, knownPrefixes);
 
       if (origTitle !== newTitle) {
+        console.log("new title is %o", newTitle);
 
 	await octokit.issues.update({
              owner,
