@@ -25,10 +25,10 @@ async function run() {
       if (origTitle !== newTitle) {
         console.log("new title is %o", newTitle);
 
-	await octokit.issues.update({
+	      await octokit.rest.issues.update({
              owner,
              repo,
-             issue_number,
+             issueNumber,
              title: newTitle
         });
       }
