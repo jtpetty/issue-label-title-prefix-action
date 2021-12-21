@@ -23,7 +23,6 @@ async function run() {
       const newTitle  = correctTitle(origTitle, prefix, knownPrefixes);
 
       if (origTitle !== newTitle) {
-        console.log("new title is %o", newTitle);
 
 	      await octokit.rest.issues.update({
              owner,
@@ -34,7 +33,7 @@ async function run() {
       }
 
     } else {
-      console.log("No matching prefix found for label ${label}.");
+      console.log(`No matching prefix found for label ${label}.`);
     }
   } catch (error) {
     console.error(error);
